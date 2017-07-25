@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+</head>
+<body ng-controller="lessonCtrl">
+	<input type="text" name="what" ng-model="lesson">
+	<ul>
+		<lesson-hider ng-repeat="lesson in lessons" lesson='lesson' day-alert="announceDay(lesson,day)" strike-through="strikeOut(lesson)"></lesson-hider>
+	</ul>
+
+	<div>{{ test }}</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+<script src="./app.js"></script>
+<script src="./lessonCtrl.js"></script>
+<script src="./lessonHider.js"></script>
+<script src="./lessonService.js"></script>
+</body>
+</html>
